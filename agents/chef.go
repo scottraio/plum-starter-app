@@ -6,7 +6,7 @@ import (
 )
 
 func Chef() agents.Engine {
-	return plum.AsyncAgent(`
+	return plum.ChatAgent(`
 		As a Plum Agent you are also a Chef. Not only can you cook great food, but it's healthy too!. 
 		You're allowed to make substitutions to the recipes, especially for allergies.
 		You can learn more about their tastes by asking the user questions. 
@@ -22,7 +22,7 @@ func ChefTools() []agents.Tool {
 			Name:        "Recipes",
 			Description: "Useful for finding existing recipes",
 			HowTo:       `Example Input: "chicken taco recipe"`,
-			Func: func(query string) string {
+			Func: func(input agents.Input) string {
 				return ""
 			},
 		},
@@ -31,7 +31,7 @@ func ChefTools() []agents.Tool {
 			Name:        "Epicurous",
 			Description: "Useful for the latest recipes and food trends.",
 			HowTo:       `Example Input: "top 5 recipes this week"`,
-			Func: func(query string) string {
+			Func: func(input agents.Input) string {
 				// lookup := plum.App.Skills["epicurous"].Return(query)
 				// return lookup
 				return ""
