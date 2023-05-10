@@ -26,16 +26,5 @@ func ChefTools() []agents.Tool {
 				return ""
 			},
 		},
-
-		{
-			Name:        "Epicurous",
-			Description: "Useful for the latest recipes and food trends.",
-			HowTo:       `Example Input: "top 5 recipes this week"`,
-			Func: func(input agents.Input) string {
-				// lookup := plum.App.Skills["epicurous"].Return(query)
-				// return lookup
-				return ""
-			},
-		},
 	}
 }
